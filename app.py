@@ -4,7 +4,7 @@ from transformers import pipeline
 
 app=FastAPI()
 
-pipe=pipeline("text2text-generation",model="google/flan-t5-small")
+pipe=pipeline("text-generation",model="gpt2") # you can change the model to any other text generation model available in Hugging Face
 
 @app.get('/')
 def home():
